@@ -161,19 +161,19 @@ namespace Konyvtar2
             SqlDataAdapter dataAdapter = new SqlDataAdapter();
             DataTable dt = new DataTable();
             SqlDataReader reader;
-            int catID = 0, pubID = 0;
+            string catID = "", pubID = "";
             try
             {
                 conn.connection().Open();
                 if (conn.connection().State == ConnectionState.Open)
                 {
-                    sql = "SELECT Catagory_ID FROM CategoryDetail WHERE Category_Name = '" + cmbCategory.Text + "'";
+                    sql = "SELECT Category_Name FROM CategoryDetail WHERE Category_Name = '" + cmbCategory.Text + "'";
                     cmd.Connection = conn.connection();
                     cmd.CommandText = sql;
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        catID = reader.GetInt32(0);
+                        catID = reader.GetString(0);
                     }
                     reader.Close();
 
@@ -182,18 +182,18 @@ namespace Konyvtar2
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        pubID = reader.GetInt32(0);
+                        pubID = reader.GetString(0);
                     }
                     reader.Close();
 
-                    if (txtID.Text.Length == 0 || txtTitle.Text.Length == 0 || txtPubYear.Text.Length == 0)
+                    if (string.IsNullOrEmpty(txtID.Text) || string.IsNullOrEmpty(txtTitle.Text) || string.IsNullOrEmpty(txtPubYear.Text))
                     {
                         MessageBox.Show("One or more fields are empty");
                     }
                     else
                     {
                         sql = "INSERT INTO Book_Detail(id, Book_Title, Category_Name, Binding_Name, Publication_Year, Actual_No_Of_Copy, Current_No_Of_Copy)" +
-                            "VALUES('" + txtID.Text + "','" + txtTitle.Text + "'," + catID + "," + pubID + "," + int.Parse(txtPubYear.Text) + "," + int.Parse(txtACopy.Text) + ",'" + txtCCopy.Text + "')";
+                            "VALUES('" + txtID.Text + "','" + txtTitle.Text + "','" + cmbCategory.Text + "','" + cmbPublisher.Text + "'," + int.Parse(txtPubYear.Text) + "," + int.Parse(txtACopy.Text) + ",'" + txtCCopy.Text + "')";
                         cmd.CommandText = sql;
                         if (cmd.ExecuteNonQuery() > 0)
                         {
@@ -231,6 +231,7 @@ namespace Konyvtar2
                 conn.connection().Close();
             }
         }
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {

@@ -30,8 +30,6 @@
         {
             this.pnNavigation = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnRent = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.btnPublisher = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
@@ -58,8 +56,6 @@
             this.pnNavigation.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pnNavigation.Controls.Add(this.btnLogOut);
-            this.pnNavigation.Controls.Add(this.btnRent);
-            this.pnNavigation.Controls.Add(this.btnAccount);
             this.pnNavigation.Controls.Add(this.btnPublisher);
             this.pnNavigation.Controls.Add(this.btnCategory);
             this.pnNavigation.Controls.Add(this.btnStudent);
@@ -82,26 +78,6 @@
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnRent
-            // 
-            this.btnRent.Location = new System.Drawing.Point(11, 283);
-            this.btnRent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(151, 36);
-            this.btnRent.TabIndex = 6;
-            this.btnRent.Text = "button2";
-            this.btnRent.UseVisualStyleBackColor = true;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Location = new System.Drawing.Point(11, 335);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(151, 36);
-            this.btnAccount.TabIndex = 5;
-            this.btnAccount.Text = "button2";
-            this.btnAccount.UseVisualStyleBackColor = true;
             // 
             // btnPublisher
             // 
@@ -283,7 +259,7 @@
             this.Controls.Add(this.pnNavigation);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPublish";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publishers";
@@ -300,8 +276,6 @@
 
         private System.Windows.Forms.Panel pnNavigation;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnPublisher;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnStudent;

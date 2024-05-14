@@ -33,8 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnNavigation = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnRent = new System.Windows.Forms.Button();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.btnPublisher = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
@@ -92,8 +90,6 @@
             // 
             this.pnNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pnNavigation.Controls.Add(this.btnLogOut);
-            this.pnNavigation.Controls.Add(this.btnRent);
-            this.pnNavigation.Controls.Add(this.btnAccount);
             this.pnNavigation.Controls.Add(this.btnPublisher);
             this.pnNavigation.Controls.Add(this.btnCategory);
             this.pnNavigation.Controls.Add(this.btnStudent);
@@ -113,24 +109,6 @@
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnRent
-            // 
-            this.btnRent.Location = new System.Drawing.Point(12, 418);
-            this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(169, 44);
-            this.btnRent.TabIndex = 6;
-            this.btnRent.Text = "button2";
-            this.btnRent.UseVisualStyleBackColor = true;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.Location = new System.Drawing.Point(12, 503);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(169, 44);
-            this.btnAccount.TabIndex = 5;
-            this.btnAccount.Text = "button2";
-            this.btnAccount.UseVisualStyleBackColor = true;
             // 
             // btnPublisher
             // 
@@ -392,8 +370,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnNavigation;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnPublisher;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnStudent;
